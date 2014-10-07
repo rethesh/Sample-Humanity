@@ -1,0 +1,80 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://accounts.humanity.com/"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@id='login-email']"
+      },
+      "text": "ryanpaulfyfe+testhumanityemployee@gmail.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//label[text()='Password']/following-sibling::input"
+      },
+      "text": "123123"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@value='Sign in']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='account_sidebar']//a[contains(text(),'ADD')]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@id='places-search']"
+      },
+      "text": "Hotel"
+    },
+    {
+      "type": "pause",
+      "waitTime": "5000"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//ul[@id='places-list']/li[2][div[b]]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//a[text()='JOIN REQUEST']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//a[text()='LOGOUT']"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

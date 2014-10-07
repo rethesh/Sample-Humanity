@@ -1,0 +1,100 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://accounts.humanity.com/"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@id='login-email']"
+      },
+      "text": "ryanpaulfyfe+testhumanityemployee@gmail.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//label[text()='Password']/following-sibling::input"
+      },
+      "text": "123123"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@value='Sign in']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='account_sidebar']//a[contains(text(),'ADD')]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//li[text()='Create New']"
+      }
+    },
+    {
+      "type": "pause",
+      "waitTime": "1000"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@name='company-name']"
+      },
+      "text": "Test Yantra Software Solutions(India) Pvt. Ltd."
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@name='company-address']"
+      },
+      "text": "Suraj Manor,100, Dodda Basavana Gudi Raste, Mahantara Lay Out, Basavanagudi, Bengaluru, Karnataka 560019"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@name='company-domain']"
+      },
+      "text": "abcd"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//a[text()='CREATE NETWORK']"
+      }
+    },
+    {
+      "type": "assertTextPresent",
+      "text": "Test Yantra Software Soluti..."
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//a[text()='LOGOUT']"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

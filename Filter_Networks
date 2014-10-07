@@ -1,0 +1,59 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://accounts.humanity.com/"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@id='login-email']"
+      },
+      "text": "ryanpaulfyfe+testhumanityemployee@gmail.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//label[text()='Password']/following-sibling::input"
+      },
+      "text": "123123"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@value='Sign in']"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//input[@placeholder='Filter networks...']"
+      },
+      "text": "pa"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "pa"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//a[text()='LOGOUT']"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 90
+}
